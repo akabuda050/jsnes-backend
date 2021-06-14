@@ -30,7 +30,7 @@ class Rooms {
   }
 
   handleClose(connection) {
-   this.onDisconnect(connection)
+    this.onDisconnect(connection);
   }
 
   handleError(connection) {
@@ -47,6 +47,17 @@ class Rooms {
     room.joinRoom(connection);
 
     this.rooms = [...this.rooms, room];
+
+    const event = {
+      event: "roomsList",
+      data: {
+        rooms: this.rooms.map((r) => ({
+          id: r.id,
+          name: r.name,
+        })),
+      },
+    };
+    connection.broadcastAll(JSON.stringify(event));
   }
 
   onJoinRoom({ id }, connection) {

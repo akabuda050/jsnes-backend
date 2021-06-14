@@ -109,7 +109,7 @@ class StateMachine {
     switch (data.keyPressed) {
       case "Insert":
         this.saveScreenshot({ imageData: data.imageData }, connection);
-        break;
+        return;
       case "Delete":
         this.setCurrentListItemStatus({ processed: true, corrupt: true });
         this.setCurrentList();
