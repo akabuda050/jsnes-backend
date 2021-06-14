@@ -1,10 +1,10 @@
 # jsnes-backend
 
-Working with https://github.com/akabuda050/jsnes-web
+Works with https://github.com/akabuda050/jsnes-web
 
 # Install
 
-Create folders `roms/{your_rom_name}/{your_rom_name}.nes` and `alphabet_list/games.json` in project folder
+Create folders `roms/myrom/myrom.nes` and `alphabet_list/games.json` in project folder
 
 Put games info to `alphabet_list/games.json` like in example below:
 
@@ -14,12 +14,12 @@ Put games info to `alphabet_list/games.json` like in example below:
   {
     name: "My Rom",
     description: <span>This is my own homebrew NES rom</span>,
-    slug: "myrom.nes",
+    slug: "myrom",
   },
   {
     name: "My Rom 2",
     description: <span>This is my own homebrew NES rom 2</span>,
-    slug: "myrom2.nes",
+    slug: "myrom2",
   },
   // ...
 ];
