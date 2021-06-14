@@ -27,3 +27,6 @@ Put games info to `alphabet_list/games.json` like in example below:
 
 Run `npm install`
 Run `node server`
+
+# Example
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/4xMhcnmOuKE/0.jpg)](https://www.youtube.com/watch?v=4xMhcnmOuKE)
