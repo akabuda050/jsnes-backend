@@ -4,9 +4,9 @@ Working with https://github.com/akabuda050/jsnes-web
 
 # Install
 
-Create folders `roms/{your_rom_name}/{your_rom_name}.nes` and `alphabet_list/games.json`
+Create folders `roms/{your_rom_name}/{your_rom_name}.nes` and `alphabet_list/games.json` in project folder
 
-Put games info to `games.json` like in example below:
+Put games info to `alphabet_list/games.json` like in example below:
 
 ```javascript
 [
