@@ -107,18 +107,18 @@ class StateMachine {
     console.log("specialKeyboardEvent");
 
     switch (data.keyPressed) {
-      case "Insert":
+      case "1":
         this.saveScreenshot({ imageData: data.imageData }, connection);
         return;
-      case "Delete":
+      case "4":
         this.setCurrentListItemStatus({ processed: true, corrupt: true });
         this.setCurrentList();
         break;
-      case "End":
+      case "3":
         this.setCurrentListItemStatus({ processed: true, corrupt: false });
         this.setCurrentList();
         break;
-      case "Home":
+      case "2":
         break;
     }
 
@@ -132,11 +132,11 @@ class StateMachine {
   saveScreenshot({ imageData }, connection) {
     console.log("image saved");
     const base64Data = imageData.replace(/^data:image\/png;base64,/, "");
-    if (!fs.existsSync(resolve(`./images/`))) {
-      fs.mkdirSync(resolve(`./images/`), { recursive: true });
+    if (!fs.existsSync(resolve(`./images/${this.currentListItem.slug}/images`))) {
+      fs.mkdirSync(resolve(`./images/${this.currentListItem.slug}/images`), { recursive: true });
     }
     fs.writeFileSync(
-      resolve(`./images/${Date.now()}_${this.currentListItem.slug}.png`),
+      resolve(`./images/${this.currentListItem.slug}/images/${Date.now()}_${this.currentListItem.slug}.png`),
       base64Data,
       "base64"
     );
